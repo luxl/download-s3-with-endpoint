@@ -1,6 +1,6 @@
-name: Download S3
-description: GitHub action to download files from Amazon S3
-author: Giao Ho
+name: Download S3 with endpoint support
+description: GitHub action to download files from S3
+author: Allen
 inputs:
   aws_access_key_id:
     description: AWS access key ID.
@@ -14,6 +14,9 @@ inputs:
   aws_bucket:
     description: The bucket name containing the files to download.
     required: true
+  endpoint:
+    description: S3 endpoint URL.
+    required: false
   source:
     description: The directory (or file path) on the bucket to which you want to download.
     required: false

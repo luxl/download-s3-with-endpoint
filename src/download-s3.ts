@@ -57,14 +57,15 @@ function saveFile(file: string, body?: Body): boolean {
   try {
     const inputs: S3Inputs = getInputs();
 
+    const endpoint = new aws.Endpoint(inputs.endpoint);
     aws.config.update({
       credentials: {
         accessKeyId: inputs.awsAccessKeyId,
         secretAccessKey: inputs.awsSecretAccessKey,
       },
-      region: inputs.awsRegion
+      region: inputs.awsRegion,
     });
-    const s3 = new aws.S3({signatureVersion: 'v4'});
+    const s3 = new aws.S3({signatureVersion: 'v4', endpoint: endpoint});
 
     const outputs: any = {
       succeeded: 0,

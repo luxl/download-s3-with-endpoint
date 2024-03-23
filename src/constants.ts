@@ -4,7 +4,8 @@ export enum Inputs {
   AwsRegion = 'aws_region',
   AwsBucket = 'aws_bucket',
   Source = 'source',
-  Target = 'target'
+  Target = 'target',
+  Endpoint = 'endpoint'
 }
 
 export enum Outputs {

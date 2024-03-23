@@ -7,6 +7,7 @@ export interface S3Inputs {
   awsSecretAccessKey: string;
   awsRegion: string;
   awsBucket: string;
+  endpoint: string;
   source: string;
   target: string;
 }
@@ -36,6 +37,7 @@ export function getInputs(): S3Inputs {
   result.awsSecretAccessKey = core.getInput(Inputs.AwsSecretAccessKey, {required: true});
   result.awsRegion = core.getInput(Inputs.AwsRegion, {required: true});
   result.awsBucket = core.getInput(Inputs.AwsBucket, {required: true});
+  result.endpoint = core.getInput(Inputs.Endpoint, {required: false}) ?? 'https://s3.amazonaws.com';
 
   result.source = core.getInput(Inputs.Source, {required: false}) ?? '';
   result.target = core.getInput(Inputs.Target, {required: false}) ?? '.';

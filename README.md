@@ -12,6 +12,7 @@ See [action.yml](action.yml)
 - `aws_secret_access_key`: (__Required__) The AWS secret access key.
 - `aws_region`: (__Required__) The region to send service requests to.
 - `aws_bucket`: (__Required__) The bucket name containing the files to download.
+- `endpoint`: The endpoint URL of the bucket. Default is `https://s3.amazonaws.com`.
 - `source`: The directory (or file path) on the bucket to which you want to download. Default is root directory.
 - `target`: The local directory (or file path) where files are saved. Default is current directory.
 
