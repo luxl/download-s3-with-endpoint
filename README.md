@@ -20,7 +20,7 @@ See [action.yml](action.yml)
 
 ```yaml
 steps:
-  - uses: luxl/download-s3-with-endpoint@main
+  - uses: luxl/download-s3-with-endpoint@v0.2
     with:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
